@@ -1,0 +1,10 @@
+{
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true,
+    "moduleTypes": {
+      "./scripts/**/*.ts": "esm"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "@stefanprobst/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
+    }
+  },
+}
