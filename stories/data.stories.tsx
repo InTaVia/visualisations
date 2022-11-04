@@ -1,6 +1,10 @@
 import entities100 from "./fixtures/entities-100.json";
 
-function Visualisation(props: VisualisationProps): JSX.Element {
+interface DataViewProps {
+  entities: Record<string, Record<string, any>>
+}
+
+function DataView(props: DataViewProps): JSX.Element {
   const { entities } = props;
 
   return (
@@ -16,10 +20,11 @@ function Visualisation(props: VisualisationProps): JSX.Element {
   );
 }
 
+// TODO: make control to select different fixtures
 const meta = {};
 
 export default meta;
 
 export const Test = () => {
-  return <Visualisation entities={entities100} />;
+  return <DataView entities={entities100} />;
 };
