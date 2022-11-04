@@ -14,7 +14,7 @@ const dataset = {
   bs: "http://ldf.fi/nbf/data",
 };
 
-async function generate() {
+async function generate(limit: number) {
   const options: RequestOptions = { responseType: "json" };
 
   const url = createUrl({
@@ -23,7 +23,7 @@ async function generate() {
     searchParams: {
       datasets: [dataset.apis, dataset.bs],
       includeEvents: true,
-      limit: 100,
+      limit: limit,
     },
   });
 
@@ -31,7 +31,7 @@ async function generate() {
   const entitiesById = keyBy(data.results, (entity) => entity.id);
 
   const fixturesFolder = join(process.cwd(), "stories", "fixtures");
-  const filePath = join(fixturesFolder, "entities-100.json");
+  const filePath = join(fixturesFolder, `entities-${limit}.json`);
   await writeFile(
     filePath,
     format(JSON.stringify(entitiesById), { parser: "json" }),
@@ -39,10 +39,11 @@ async function generate() {
   );
 }
 
-generate()
+[1, 2, 20, 100].forEach(limit =>{ generate(limit)
   .then(() => {
     log.success("Successfully generated fixtures.");
   })
   .catch((error) => {
     log.error("Failed to generate fixtures.\n", String(error));
   });
+})
