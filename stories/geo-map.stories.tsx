@@ -23,10 +23,7 @@ const entityGroups = {
   20: entities020,
   100: entities100
 }
-<<<<<<< HEAD
 const argTypes = {entitiesCount: { control: { type: "select", options: Object.keys(entityGroups)}, defaultValue: Object.keys(entityGroups).at(-1),},}
-=======
->>>>>>> 172a333 (added data to map stories)
 
 const config: Meta = {
   component: GeoMap,
@@ -43,14 +40,8 @@ const config: Meta = {
       argTypesRegex: '',
     },
   },
-<<<<<<< HEAD
   argTypes: argTypes,
   
-=======
-  argTypes: {
-    entitiesCount: { control: { type: "select", options: Object.keys(entityGroups)}, defaultValue: Object.keys(entityGroups).at(-1),},
-  },
->>>>>>> 172a333 (added data to map stories)
 };
 
 export default config;
@@ -78,7 +69,6 @@ export const Default = (args: JSX.IntrinsicAttributes & GeoMapProps & RefAttribu
 //   );
 // };
 
-<<<<<<< HEAD
 export const MarkersLayer: Story<GeoMapProps> = function MarkersLayer(args): JSX.Element {
   
   // FIXME: Put into geo-map-data-mapper
@@ -105,34 +95,3 @@ export const MarkersLayer: Story<GeoMapProps> = function MarkersLayer(args): JSX
     </GeoMap>
   );
 };
-
-// helper Function to extract events until
-=======
-export const WithMarkersLayer: Story<GeoMapProps> = function WithMarkersLayer(args): JSX.Element {
-  
-  // entityGroups[args.entitiesCount as number]
-
-  const points: Array<Point<{ id: string }>> = range(0, args.entitiesCount as number - 1).map((i) => {
-    const id = String(i);
-
-    return {
-      id,
-      data: { id },
-      label: `Point ${id}`,
-      geometry: {
-        type: 'Point',
-        coordinates: [
-          Number(faker.address.longitude(40, -10)),
-          Number(faker.address.latitude(70, 30)),
-        ],
-      },
-    };
-  });
-
-  return (
-    <GeoMap {...baseMap} {...args}>
-      <GeoMapMarkersLayer onChangeHover={action('onChangeHover')} points={points} />
-    </GeoMap>
-  );
-};
->>>>>>> 172a333 (added data to map stories)
