@@ -12,6 +12,18 @@ import { GeoMapMarkersLayer } from '../src/features/visualisations/geo-map/geo-m
 import type { RefAttributes } from 'react';
 import type { MapRef } from 'react-map-gl';
 
+import entities001 from "./fixtures/entities-1.json";
+import entities002 from "./fixtures/entities-2.json";
+import entities020 from "./fixtures/entities-20.json";
+import entities100 from "./fixtures/entities-100.json";
+
+const entityGroups = {
+  1: entities001,
+  2: entities002,
+  20: entities020,
+  100: entities100
+}
+
 const config: Meta = {
   component: GeoMap,
   title: 'Visualisations/GeoMap',
@@ -23,6 +35,9 @@ const config: Meta = {
        */
       argTypesRegex: '',
     },
+  },
+  argTypes: {
+    entitiesCount: { control: { type: "select", options: Object.keys(entityGroups)}, defaultValue: Object.keys(entityGroups).at(-1),},
   },
 };
 
@@ -51,27 +66,30 @@ export const Default = (args: JSX.IntrinsicAttributes & GeoMapProps & RefAttribu
 //   );
 // };
 
-// export const WithMarkersLayer: Story<GeoMapProps> = function WithMarkersLayer(args): JSX.Element {
-//   const points: Array<Point<{ id: string }>> = range(0, 50).map((i) => {
-//     const id = String(i);
+export const WithMarkersLayer: Story<GeoMapProps> = function WithMarkersLayer(args): JSX.Element {
+  
+  // entityGroups[args.entitiesCount as number]
 
-//     return {
-//       id,
-//       data: { id },
-//       label: `Point ${id}`,
-//       geometry: {
-//         type: 'Point',
-//         coordinates: [
-//           Number(faker.address.longitude(40, -10)),
-//           Number(faker.address.latitude(70, 30)),
-//         ],
-//       },
-//     };
-//   });
+  const points: Array<Point<{ id: string }>> = range(0, args.entitiesCount as number - 1).map((i) => {
+    const id = String(i);
 
-//   return (
-//     <GeoMap {...baseMap} {...args}>
-//       <GeoMapMarkersLayer onChangeHover={action('onChangeHover')} points={points} />
-//     </GeoMap>
-//   );
-// };
+    return {
+      id,
+      data: { id },
+      label: `Point ${id}`,
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          Number(faker.address.longitude(40, -10)),
+          Number(faker.address.latitude(70, 30)),
+        ],
+      },
+    };
+  });
+
+  return (
+    <GeoMap {...baseMap} {...args}>
+      <GeoMapMarkersLayer onChangeHover={action('onChangeHover')} points={points} />
+    </GeoMap>
+  );
+};

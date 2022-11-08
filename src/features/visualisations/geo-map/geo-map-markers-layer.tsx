@@ -24,7 +24,8 @@ export function GeoMapMarkersLayer<T>(props: GeoMapMarkersLayerProps<T>): JSX.El
   useEffect(() => {
     if (mapRef == null || autoFitBounds !== true) return;
 
-    // mapRef.fitBounds(calculateBounds(points), { padding: 50, duration: 100 });
+    // FIXME convert points to Array<[point.geometry.coordinates]>
+    // mapRef.fitBounds(calculateBounds(points.map((point) => { if (point.geometry.type !== 'Point') return null; return point.geometry.coordinates})), { padding: 50, duration: 100 });
   }, [autoFitBounds, mapRef, points]);
 
   return (
