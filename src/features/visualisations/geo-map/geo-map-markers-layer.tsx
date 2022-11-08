@@ -27,9 +27,16 @@ export function GeoMapMarkersLayer<T>(props: GeoMapMarkersLayerProps<T>): JSX.El
 
   useEffect(() => {
     if (mapRef == null || autoFitBounds !== true) return;
+<<<<<<< HEAD
     const coordinates = features.map((point) => { if (point.geometry.type !== 'Point') return null; return point.geometry.coordinates as [number, number]}).filter(Boolean) as Array<[number, number]>
     mapRef.fitBounds(calculateBoundsFromPoints(coordinates), { padding: 50, duration: 100 });
   }, [autoFitBounds, mapRef, features]);
+=======
+
+    // FIXME convert points to Array<[point.geometry.coordinates]>
+    // mapRef.fitBounds(calculateBounds(points.map((point) => { if (point.geometry.type !== 'Point') return null; return point.geometry.coordinates})), { padding: 50, duration: 100 });
+  }, [autoFitBounds, mapRef, points]);
+>>>>>>> 172a333 (added data to map stories)
 
   return (
     <Fragment>
