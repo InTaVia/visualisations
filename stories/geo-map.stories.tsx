@@ -7,7 +7,7 @@ import type { GeoMapProps } from '@/features/visualisations/geo-map/geo-map';
 import { GeoMap } from '@/features/visualisations/geo-map/geo-map';
 import { base as baseMap } from '@/features/visualisations/geo-map/geo-map.config';
 import { GeoMapDrawControls } from '../src/features/visualisations/geo-map/geo-map-draw-controls';
-import type { Point } from '../src/features/visualisations/geo-map/geo-map-markers-layer';
+import type { Feature } from '../src/features/visualisations/geo-map/geo-map-markers-layer';
 import { GeoMapMarkersLayer } from '../src/features/visualisations/geo-map/geo-map-markers-layer';
 import type { RefAttributes } from 'react';
 import type { MapRef } from 'react-map-gl';
@@ -23,11 +23,15 @@ const entityGroups = {
   20: entities020,
   100: entities100
 }
+const argTypes = {entitiesCount: { control: { type: "select", options: Object.keys(entityGroups)}, defaultValue: Object.keys(entityGroups).at(-1),},}
 
 const config: Meta = {
   component: GeoMap,
   title: 'Visualisations/GeoMap',
   parameters: {
+    controls:{
+      include: Object.keys(argTypes)
+    },
     actions: {
       /**
        * `react-map-gl` fires callbacks for every `onRender`.
@@ -36,9 +40,8 @@ const config: Meta = {
       argTypesRegex: '',
     },
   },
-  argTypes: {
-    entitiesCount: { control: { type: "select", options: Object.keys(entityGroups)}, defaultValue: Object.keys(entityGroups).at(-1),},
-  },
+  argTypes: argTypes,
+  
 };
 
 export default config;
@@ -66,11 +69,10 @@ export const Default = (args: JSX.IntrinsicAttributes & GeoMapProps & RefAttribu
 //   );
 // };
 
-export const WithMarkersLayer: Story<GeoMapProps> = function WithMarkersLayer(args): JSX.Element {
+export const MarkersLayer: Story<GeoMapProps> = function MarkersLayer(args): JSX.Element {
   
-  // entityGroups[args.entitiesCount as number]
-
-  const points: Array<Point<{ id: string }>> = range(0, args.entitiesCount as number - 1).map((i) => {
+  // FIXME: Put into geo-map-data-mapper
+  const points: Array<Feature<{ id: string }>> = range(0, args.entitiesCount as number - 1).map((i) => {
     const id = String(i);
 
     return {
@@ -89,7 +91,9 @@ export const WithMarkersLayer: Story<GeoMapProps> = function WithMarkersLayer(ar
 
   return (
     <GeoMap {...baseMap} {...args}>
-      <GeoMapMarkersLayer onChangeHover={action('onChangeHover')} points={points} />
+      <GeoMapMarkersLayer onChangeHover={action('onChangeHover')} onClick={action('onClick')} features={points} autoFitBounds={true}/>
     </GeoMap>
   );
 };
+
+// helper Function to extract events until
