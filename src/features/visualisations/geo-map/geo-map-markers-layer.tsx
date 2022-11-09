@@ -1,8 +1,10 @@
-import type { Geometry, Position } from 'geojson';
+import type { Geometry } from 'geojson';
 import { Fragment, useEffect, useState } from 'react';
-import { Marker, useMap } from 'react-map-gl';
+import { useMap } from 'react-map-gl';
+import { GeoMapMarker } from './geo-map-marker';
+import { calculateBoundsFromPoints } from './geo-map-utils';
 
-export interface Point<T> {
+export interface Feature<T> {
   data: T;
   id: string;
   label: string;
@@ -12,34 +14,36 @@ export interface Point<T> {
 interface GeoMapMarkersLayerProps<T> {
   autoFitBounds?: boolean;
   onChangeHover?: (point: T | null) => void;
-  points: Array<Point<T>>;
+  onClick?: (point: T | null) => void;
+  features: Array<Feature<T>>;
 }
 
 export function GeoMapMarkersLayer<T>(props: GeoMapMarkersLayerProps<T>): JSX.Element {
-  const { autoFitBounds, onChangeHover, points } = props;
+  const { autoFitBounds, onChangeHover, onClick, features } = props;
 
-  const { common: mapRef } = useMap();
-  const [isHovered, setIsHovered] = useState<Point<T>['id'] | null>(null);
+  const { current: mapRef } = useMap();
+  const [isHovered, setIsHovered] = useState<Feature<T>['id'] | null>(null);
+  const [wasClicked, setWasClicked] = useState<Feature<T>['id'] | null>(null);
 
   useEffect(() => {
     if (mapRef == null || autoFitBounds !== true) return;
-
-    // FIXME convert points to Array<[point.geometry.coordinates]>
-    // mapRef.fitBounds(calculateBounds(points.map((point) => { if (point.geometry.type !== 'Point') return null; return point.geometry.coordinates})), { padding: 50, duration: 100 });
-  }, [autoFitBounds, mapRef, points]);
+    const coordinates = features.map((point) => { if (point.geometry.type !== 'Point') return null; return point.geometry.coordinates as [number, number]}).filter(Boolean) as Array<[number, number]>
+    mapRef.fitBounds(calculateBoundsFromPoints(coordinates), { padding: 50, duration: 100 });
+  }, [autoFitBounds, mapRef, features]);
 
   return (
     <Fragment>
-      {points.map((point) => {
-        // TODO: deal with polygons
-        if (point.geometry.type !== 'Point') return null;
-
-        const coordinates = point.geometry.coordinates;
+      {features.map((feature) => {
+        
+        // TODO: deal with polygons calculate centroid/center/centerOfMass (see turf.js) / Polygon on Surface for concave Polygons?
+        if (feature.geometry.type !== 'Point') return null;
+      
+        const coordinates = feature.geometry.coordinates;
         const color = 'tomato'; // FIXME:
 
         function onHoverStart() {
-          setIsHovered(point.id);
-          onChangeHover?.(point.data);
+          setIsHovered(feature.id);
+          onChangeHover?.(feature.data);
         }
 
         function onHoverEnd() {
@@ -47,59 +51,22 @@ export function GeoMapMarkersLayer<T>(props: GeoMapMarkersLayerProps<T>): JSX.El
           onChangeHover?.(null);
         }
 
+        function onMouseClick() {
+          setWasClicked(feature.id);
+          onClick?.(feature.data);
+        }
+
         return (
           <GeoMapMarker
-            key={point.id}
+            key={feature.id}
             color={color}
             coordinates={coordinates}
             onHoverStart={onHoverStart}
             onHoverEnd={onHoverEnd}
+            onClick={onMouseClick}
           />
         );
       })}
     </Fragment>
   );
-}
-
-interface GeoMapMarkerProps {
-  coordinates: Position;
-  color: string;
-  onHoverStart: () => void;
-  onHoverEnd: () => void;
-  /** @default 16 */
-  size?: number;
-}
-
-function GeoMapMarker(props: GeoMapMarkerProps): JSX.Element {
-  const { color, coordinates, onHoverStart, onHoverEnd, size = 16 } = props;
-
-  const [lng, lat] = coordinates;
-
-  return (
-    <Marker anchor="center" latitude={lat} longitude={lng}>
-      <svg
-        className="cursor-pointer"
-        height={size}
-        onMouseEnter={onHoverStart}
-        onMouseLeave={onHoverEnd}
-        viewBox="0 0 24 24"
-      >
-        <circle cx={12} cy={12} r={size / 2} fill={color} />
-      </svg>
-    </Marker>
-  );
-}
-
-function calculateBounds(points: Array<[number, number]>): [number, number, number, number] {
-  const lng: Array<number> = [];
-  const lat: Array<number> = [];
-
-  points.forEach((point) => {
-    lng.push(point[0]);
-    lat.push(point[0]);
-  });
-
-  const corners = [Math.min(...lng), Math.min(...lat), Math.max(...lng), Math.max(...lat)];
-
-  return corners as [number, number, number, number];
 }
