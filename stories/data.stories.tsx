@@ -1,4 +1,5 @@
 import type { Meta } from "@storybook/react";
+import { Fragment } from "react";
 
 import entities001 from "./fixtures/entities-1.json";
 import entities002 from "./fixtures/entities-2.json";
@@ -9,7 +10,7 @@ import events001 from "./fixtures/events-1.json";
 import events002 from "./fixtures/events-2.json";
 import events020 from "./fixtures/events-20.json";
 import events100 from "./fixtures/events-100.json";
-import { Fragment } from "react";
+
 
 const entityGroups = {
   1: entities001,

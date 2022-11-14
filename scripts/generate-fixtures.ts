@@ -7,6 +7,8 @@ import { log } from "@stefanprobst/log";
 import { format } from "prettier";
 import { keyBy } from "@stefanprobst/key-by";
 
+import type { Entity, EntityEvent } from "@/api/intavia.models"
+
 const baseUrl = "https://intavia-backend.acdh-dev.oeaw.ac.at";
 
 const dataset = {
@@ -30,11 +32,11 @@ async function generate(limit: number) {
   const data = await request(url, options);
   
   //reduce events array to array of event ids
-  const entities = data.results.map((entity: any) => {return {...entity, events: entity.events.map((event: any) => event.id)}});
+  const entities: Array<Entity> = data.results.map((entity: Entity) => {return {...entity, events: entity.events!.map((event) => event.id as EntityEvent['id'])}});
   const entitiesById = keyBy(entities, (entity) => entity.id);
 
   //extract events from entities; Set used to remove duplicates comming from different entitites
-  const events: Array<Record<string, any>> = Array.from(new Set(data.results.flatMap((entity: any) => entity.events)));
+  const events: Array<EntityEvent> = Array.from(new Set(data.results.flatMap((entity: Entity) => entity.events)));
   const eventsById = keyBy(events, (event) => event['id']);
 
   const fixturesFolder = join(process.cwd(), "stories", "fixtures");
