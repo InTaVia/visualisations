@@ -12,253 +12,30 @@ import { GeoMapMarkersLayer } from "../src/features/visualisations/geo-map/geo-m
 import type { RefAttributes } from "react";
 import type { MapRef } from "react-map-gl";
 
-const dataFix = {
-  "http://www.intavia.eu/apis/personproxy/147956": {
-    id: "http://www.intavia.eu/apis/personproxy/147956",
-    label: { default: "Sauer, Hedda" },
-    source: { citation: "Austrian Biographical Dictionary" },
-    linkedIds: [
-      {
-        id: "147956",
-        provider: {
-          label: "Österreichische Biographische Lexikon, APIS",
-          baseUrl: "https://apis.acdh.oeaw.ac.at",
-        },
-      },
-      {
-        id: "116977477",
-        provider: {
-          label: "Gemeinsame Normdatei (GND)",
-          baseUrl: "https://d-nb.info/gnd",
-        },
-      },
-    ],
-    kind: "person",
-    events: [
-      {
-        id: "http://www.intavia.eu/apis/deathevent/147956",
-        label: { default: "Death of Hedda Sauer" },
-        endDate: "1953-03-21T23:59:59.000Z",
-        place: {
-          id: "http://www.intavia.eu/apis/place/14608",
-          label: { default: "Prag" },
-          geometry: { coordinates: [50.08804, 14.42076], type: "Point" },
-          kind: "place",
-        },
-        relations: [
-          {
-            id: "http://www.intavia.eu/apis/personproxy/147956",
-            label: { default: "Sauer, Hedda" },
-            entity: {
-              id: "http://www.intavia.eu/apis/personproxy/147956",
-              label: { default: "Sauer, Hedda" },
-              source: { citation: "Austrian Biographical Dictionary" },
-              linkedIds: [
-                {
-                  id: "147956",
-                  provider: {
-                    label: "Österreichische Biographische Lexikon, APIS",
-                    baseUrl: "https://apis.acdh.oeaw.ac.at",
-                  },
-                },
-                {
-                  id: "116977477",
-                  provider: {
-                    label: "Gemeinsame Normdatei (GND)",
-                    baseUrl: "https://d-nb.info/gnd",
-                  },
-                },
-              ],
-              kind: "person",
-            },
-            role: {
-              id: "http://www.intavia.eu/apis/deceased_person/147956",
-            },
-          },
-        ],
-      },
-      {
-        id: "http://www.intavia.eu/apis/birthevent/147956",
-        label: { default: "Birth of Hedda Sauer" },
-        startDate: "1875-09-24T00:00:00.000Z",
-        place: {
-          id: "http://www.intavia.eu/apis/place/14608",
-          label: { default: "Prag" },
-          geometry: { coordinates: [50.08804, 14.42076], type: "Point" },
-          kind: "place",
-        },
-        relations: [
-          {
-            id: "http://www.intavia.eu/apis/personproxy/147956",
-            label: { default: "Sauer, Hedda" },
-            entity: {
-              id: "http://www.intavia.eu/apis/personproxy/147956",
-              label: { default: "Sauer, Hedda" },
-              source: { citation: "Austrian Biographical Dictionary" },
-              linkedIds: [
-                {
-                  id: "147956",
-                  provider: {
-                    label: "Österreichische Biographische Lexikon, APIS",
-                    baseUrl: "https://apis.acdh.oeaw.ac.at",
-                  },
-                },
-                {
-                  id: "116977477",
-                  provider: {
-                    label: "Gemeinsame Normdatei (GND)",
-                    baseUrl: "https://d-nb.info/gnd",
-                  },
-                },
-              ],
-              kind: "person",
-            },
-            role: { id: "http://www.intavia.eu/apis/born_person/147956" },
-          },
-        ],
-      },
-      {
-        id: "http://www.intavia.eu/apis/event/personplace/147972",
-        label: { default: "Sauer, Hedda wirkte in Prag" },
-        place: {
-          id: "http://www.intavia.eu/apis/place/14608",
-          label: { default: "Prag" },
-          geometry: { coordinates: [50.08804, 14.42076], type: "Point" },
-          kind: "place",
-        },
-        relations: [
-          {
-            id: "http://www.intavia.eu/apis/personproxy/147956",
-            label: { default: "Sauer, Hedda" },
-            entity: {
-              id: "http://www.intavia.eu/apis/personproxy/147956",
-              label: { default: "Sauer, Hedda" },
-              source: { citation: "Austrian Biographical Dictionary" },
-              linkedIds: [
-                {
-                  id: "147956",
-                  provider: {
-                    label: "Österreichische Biographische Lexikon, APIS",
-                    baseUrl: "https://apis.acdh.oeaw.ac.at",
-                  },
-                },
-                {
-                  id: "116977477",
-                  provider: {
-                    label: "Gemeinsame Normdatei (GND)",
-                    baseUrl: "https://d-nb.info/gnd",
-                  },
-                },
-              ],
-              kind: "person",
-            },
-            role: {
-              id: "http://www.intavia.eu/apis/personplace/eventrole/147972",
-              label: { default: "wirkte in" },
-            },
-          },
-        ],
-      },
-    ],
-  },
-  "http://www.intavia.eu/apis/personproxy/26697": {
-    id: "http://www.intavia.eu/apis/personproxy/26697",
-    label: { default: "Thornton, Jonathan" },
-    source: { citation: "Austrian Biographical Dictionary" },
-    linkedIds: [
-      { id: "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26697/" },
-      {
-        id: "26697",
-        provider: {
-          label: "Österreichische Biographische Lexikon, APIS",
-          baseUrl: "https://apis.acdh.oeaw.ac.at",
-        },
-      },
-    ],
-    kind: "person",
-    events: [
-      {
-        id: "http://www.intavia.eu/apis/deathevent/26697",
-        label: { default: "Death of Jonathan Thornton" },
-        endDate: "1847-12-31T23:59:59.000Z",
-        place: {
-          id: "http://www.intavia.eu/apis/place/3162",
-          label: { default: "Klausenburg" },
-          geometry: { coordinates: [46.76667, 23.6], type: "Point" },
-          kind: "place",
-        },
-        relations: [
-          {
-            id: "http://www.intavia.eu/apis/personproxy/26697",
-            label: { default: "Thornton, Jonathan" },
-            entity: {
-              id: "http://www.intavia.eu/apis/personproxy/26697",
-              label: { default: "Thornton, Jonathan" },
-              source: { citation: "Austrian Biographical Dictionary" },
-              linkedIds: [
-                {
-                  id: "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26697/",
-                },
-                {
-                  id: "26697",
-                  provider: {
-                    label: "Österreichische Biographische Lexikon, APIS",
-                    baseUrl: "https://apis.acdh.oeaw.ac.at",
-                  },
-                },
-              ],
-              kind: "person",
-            },
-            role: { id: "http://www.intavia.eu/apis/deceased_person/26697" },
-          },
-        ],
-      },
-      {
-        id: "http://www.intavia.eu/apis/birthevent/26697",
-        label: { default: "Birth of Jonathan Thornton" },
-        startDate: "1776-01-01T00:00:00.000Z",
-        place: {
-          id: "http://www.intavia.eu/apis/place/3162",
-          label: { default: "Klausenburg" },
-          geometry: { coordinates: [46.76667, 23.6], type: "Point" },
-          kind: "place",
-        },
-        relations: [
-          {
-            id: "http://www.intavia.eu/apis/personproxy/26697",
-            label: { default: "Thornton, Jonathan" },
-            entity: {
-              id: "http://www.intavia.eu/apis/personproxy/26697",
-              label: { default: "Thornton, Jonathan" },
-              source: { citation: "Austrian Biographical Dictionary" },
-              linkedIds: [
-                {
-                  id: "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26697/",
-                },
-                {
-                  id: "26697",
-                  provider: {
-                    label: "Österreichische Biographische Lexikon, APIS",
-                    baseUrl: "https://apis.acdh.oeaw.ac.at",
-                  },
-                },
-              ],
-              kind: "person",
-            },
-            role: { id: "http://www.intavia.eu/apis/born_person/26697" },
-          },
-        ],
-      },
-    ],
-  },
-};
-/* const config: Meta = {
-    parameters: {
-        actions: {
-            argTypesRegex: "",
-        },
-    },
-}; */
+import entities from "./fixtures/entities-2.json";
+import events from "./fixtures/events-2.json";
+
+let dataFix = {};
+for (const entityKey of Object.keys(entities)) {
+  let entity = entities[entityKey];
+  let entityEvents = entity.events;
+  let newEvents = [];
+  for (let eventKey of entityEvents) {
+    if (events.hasOwnProperty(eventKey)) {
+      newEvents.push(events[eventKey]);
+    }
+  }
+  entity.events = newEvents;
+  dataFix[entityKey] = entity;
+}
+
+/* 
+cases:
+  - multiple entities share the same event
+  - entity has just one event
+  - user want to draw just an event on the map
+  - depict uncertainites in form of other shapes
+*/
 
 const meta: Meta = {
   component: TimelineIndiviDual,

@@ -39,7 +39,7 @@ export const TimelineEvent = (props): JSX.Element => {
     ? timeScale(new Date(eventExtent[0])) - timeScaleOffset
     : midOffset + Math.floor(thickness / 2);
 
-  let textHeight = 18;
+  let textHeight = 14;
 
   let textPosX = vertical ? posX + textOffset : posX + textOffset;
   let textPosY = vertical ? posY + textHeight / 2 : posY + textOffset;

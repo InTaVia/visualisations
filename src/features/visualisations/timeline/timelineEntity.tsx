@@ -45,13 +45,13 @@ export const TimelineEntity = (props): JSX.Element => {
         vertical ? scaleY(index) : timeScale(entityExtent[0])
       } ${vertical ? timeScale(entityExtent[0]) : scaleY(index)})`}
     >
-      {/* <rect 
+      <rect
         x={0}
         y={0}
         width={width}
         height={height}
         fill={"rgba(0, 100, 0, 0.5)"}
-      /> */}
+      />
       <rect
         x={vertical ? midOffset : 0}
         y={vertical ? 0 : midOffset}
