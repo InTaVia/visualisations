@@ -15,15 +15,10 @@ export interface Slide {
     contentPanes: Record<string, ContentPane>;
 }
 
-export interface Style {
-
-}
-
-export interface DefaultStyle {
-    'birthEvent': {fill: , stroke:,}
-}
-
-export interface CustomStyle {
+const defaultStyles = {
+    'birthevent': {primary: '#92c5de', secondary: '#0571b0'},
+    'deathevent': {primary: '#ca0020', secondary: '#f4a582'},
+    'event': {primary: '#33a02c', secondary: '#b2df8a'}
 }
 
 export interface ContentPane {
@@ -41,8 +36,10 @@ export interface Content {
 export interface Visualization {
     id: string;
     type: 'Map' | 'Timeline' | 'Network' | 'Set' | 'Statistic' //rather meta types or the concrete types?
-    data: Array<Record<EntityEvent['id'] | Entity['id'], Entity | EntityEvent>>;
-    highlighted: boolean
+    ///data: Array<Record<EntityEvent['id'] | Entity['id'], Entity | EntityEvent>>;
+    highlighted: boolean;
+    entities: Array<>;
+    events: Array<>;
 }
 
 export interface Map extends Visualization {
@@ -51,15 +48,166 @@ export interface Map extends Visualization {
     subtype:  'MarkerClusterMap' | 'TrajectoryMap';
 }
 
-export interface MarkerClusterMap extends Map {
-    id: string;
-    type: 'Map';
-    subtype: 'MarkerClusterMap';
-    clusterThemeAttribute: string;
-    featureStyle: {},
-    beeswarmStyle: {},
-    clusterStyle: {},
+export interface MarkerProperties {
+    hidden: boolean;
+    size: number;
+    fill: string; //color
+    stroke: string; //color
+    shape: 'circle' | 'rectangle' | 'icon';
+    icon?: string; //from IconStore (AssetStore)
+    coords: [number , number];
 }
+
+
+
+/* defaultMarkerProperties {
+    "DeathEvent": {hidden: false, fill: "purple"},
+} */
+
+export interface MarkerClusterMap extends Map {
+    subtype: 'MarkerClusterMap';
+    clusterThemeAttribute: string | null; // e.g. 'entity-kind'  | 'event-kind' | null for NO-clustering at all
+    clusterType: 'beeswarm' | 'donut' | null;
+    highlighed?: Array<EntityEvent['id']>;
+    events: Array<EntityEvents>;
+}
+
+// Data Requirements
+// Filter events: event-kind in ['birthevent', 'deathevent']
+// eventTypes.some(e => ['birthevent', 'deathevent'].includes(e))
+id: 'ArmasMarkerClusterMap',
+type: 'Map',
+subtype: 'MarkerClusterMap',
+clusterType: 'donut',
+clusterThemeAttribute: 'event-kind',
+highlighed: ["http://www.intavia.eu/bs/birthevent/1000"],
+events: [
+    {
+        "id": "http://www.intavia.eu/bs/birthevent/1000",
+        "label": {
+          "default": "Birth of Taipale, Armas"
+        },
+        "startDate": "1890-07-27T00:00:00.000Z",
+        "endDate": "1890-07-27T23:59:59.000Z",
+        "place": {
+          "id": "http://www.intavia.eu/bs/place/1757",
+          "label": {
+            "default": "Hlsinki"
+          },
+          "geometry": {
+            "coordinates": [
+              60.1659,
+              24.989
+            ],
+            "type": "Point"
+          },
+          "kind": "place"
+        },
+        "relations": [
+          {
+            "id": "http://www.intavia.eu/bs/personproxy/1000",
+            "label": {
+              "default": "Taipale, Armas"
+            },
+            "entity": {
+              "id": "http://www.intavia.eu/bs/personproxy/1000",
+              "label": {
+                "default": "Taipale, Armas"
+              },
+              "linkedIds": [
+                {
+                  "id": "p1000",
+                  "provider": {
+                    "label": "BiographySampo",
+                    "baseUrl": "http://ldf.fi/nbf/"
+                  }
+                },
+                {
+                  "id": "Q679220",
+                  "provider": {
+                    "label": "Wikidata",
+                    "baseUrl": "http://www.wikidata.org/entity"
+                  }
+                }
+              ],
+              "gender": {
+                "id": "http://ldf.fi/schema/bioc/Male",
+                "label": {
+                  "default": "Male"
+                }
+              },
+              "kind": "person"
+            },
+            "role": {
+              "id": "http://www.intavia.eu/bs/born_person/1000"
+            }
+          }
+        ]
+      },
+     {
+        "id": "http://www.intavia.eu/bs/deathevent/1000",
+        "label": {
+          "default": "Death of Taipale, Armas"
+        },
+        "startDate": "1976-01-01T00:00:00.000Z",
+        "endDate": "1976-12-31T23:59:59.000Z",
+        "place": {
+          "id": "http://www.intavia.eu/bs/place/38511",
+          "label": {
+            "default": "Turku"
+          },
+          "geometry": {
+            "coordinates": [
+              60.4504,
+              22.2479
+            ],
+            "type": "Point"
+          },
+          "kind": "place"
+        },
+        "relations": [
+          {
+            "id": "http://www.intavia.eu/bs/personproxy/1000",
+            "label": {
+              "default": "Taipale, Armas"
+            },
+            "entity": {
+              "id": "http://www.intavia.eu/bs/personproxy/1000",
+              "label": {
+                "default": "Taipale, Armas"
+              },
+              "linkedIds": [
+                {
+                  "id": "p1000",
+                  "provider": {
+                    "label": "BiographySampo",
+                    "baseUrl": "http://ldf.fi/nbf/"
+                  }
+                },
+                {
+                  "id": "Q679220",
+                  "provider": {
+                    "label": "Wikidata",
+                    "baseUrl": "http://www.wikidata.org/entity"
+                  }
+                }
+              ],
+              "gender": {
+                "id": "http://ldf.fi/schema/bioc/Male",
+                "label": {
+                  "default": "Male"
+                }
+              },
+              "kind": "person"
+            },
+            "role": {
+              "id": "http://www.intavia.eu/bs/deceased_person/1000"
+            }
+          }
+        ]
+      }
+
+
 
 export interface TrajectoryMap extends Map {
     id: string;
@@ -86,4 +234,10 @@ export interface DualTimeline extends Timeline {
     subtype: "DualTimeline";
     vertical: boolean;
 
+}
+
+export interface GroupTimeline extends Timeline {
+    id: string;
+    subtype: "GroupTimeline";
+    vertical: boolean;
 }
