@@ -1,0 +1,6 @@
+html,
+body,
+#storybook-docs,
+#storybook-root {
+  block-size: 100%;
+}

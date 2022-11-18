@@ -1,50 +1,58 @@
-import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css'
 
-import MapboxDraw from '@mapbox/mapbox-gl-draw';
-import type { Feature } from 'geojson';
-import type { ControlPosition } from 'maplibre-gl';
-import { useEffect } from 'react';
-import { useControl } from 'react-map-gl';
+import MapboxDraw from '@mapbox/mapbox-gl-draw'
+import type { Feature, FeatureCollection, Geometry } from 'geojson'
+import type { ControlPosition } from 'maplibre-gl'
+import { useEffect } from 'react'
+import { useControl } from 'react-map-gl'
 
-import { noop } from '@/lib/noop';
-import { useInitialValue } from '@/lib/use-initial-value';
+import { noop } from '@/lib/noop'
+import { useInitialValue } from '@/lib/use-initial-value'
 
-type GeoMapDrawControlsProps = ConstructorParameters<typeof MapboxDraw>[0] & {
-  initialFeatures?: Array<Feature> | null;
-  onCreate?: (event: { features: Array<Feature> }) => void;
-  onUpdate?: (event: { features: Array<Feature>; action: string }) => void;
-  onDelete?: (event: { features: Array<Feature> }) => void;
-  position?: ControlPosition;
-};
+export type GeoMapDrawControlsProps<
+  T extends EmptyObject = EmptyObject,
+  G extends Geometry = Geometry,
+> = ConstructorParameters<typeof MapboxDraw>[0] & {
+  initialData?: FeatureCollection<G, T> | null
+  onCreate?: (event: { features: Array<Feature<G, T>> }) => void
+  onUpdate?: (event: { features: Array<Feature<G, T>>; action: string }) => void
+  onDelete?: (event: { features: Array<Feature<G, T>> }) => void
+  position?: ControlPosition
+}
 
-export function GeoMapDrawControls(props: GeoMapDrawControlsProps): null {
-  const { initialFeatures, onCreate = noop, onUpdate = noop, onDelete = noop, position } = props;
+/**
+ * Draw controls for geo-visualisation.
+ */
+export function GeoMapDrawControls<
+  T extends EmptyObject = EmptyObject,
+  G extends Geometry = Geometry,
+>(props: GeoMapDrawControlsProps<T, G>): null {
+  const { initialData, onCreate = noop, onUpdate = noop, onDelete = noop, position } = props
 
-  const draw = useControl(
+  const draw: MapboxDraw = useControl(
     () => {
-      return new MapboxDraw(props);
+      return new MapboxDraw(props)
     },
     ({ map }) => {
-      map.on('draw.create', onCreate);
-      map.on('draw.update', onUpdate);
-      map.on('draw.delete', onDelete);
+      map.on('draw.create', onCreate)
+      map.on('draw.update', onUpdate)
+      map.on('draw.delete', onDelete)
     },
     ({ map }) => {
-      map.off('draw.create', onCreate);
-      map.off('draw.update', onUpdate);
-      map.off('draw.delete', onDelete);
+      map.off('draw.create', onCreate)
+      map.off('draw.update', onUpdate)
+      map.off('draw.delete', onDelete)
     },
     { position },
-  );
+  )
 
-  const initialFeaturesValue = useInitialValue(initialFeatures);
+  const initialFeatureCollection = useInitialValue(initialData)
+
   useEffect(() => {
-    if (initialFeaturesValue == null) return;
+    if (initialFeatureCollection == null) return
 
-    initialFeaturesValue.forEach((feature) => {
-      draw.add(feature);
-    });
-  }, [draw, initialFeaturesValue]);
+    draw.add(initialFeatureCollection)
+  }, [draw, initialFeatureCollection])
 
-  return null;
+  return null
 }

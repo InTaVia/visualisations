@@ -1,5 +1,8 @@
 node_modules/
+/dist
 *.log
+
+# caches
 .eslintcache
 .stylelintcache
 *.tsbuildinfo

@@ -2,9 +2,11 @@
   "extends": "@stefanprobst/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
+    "exactOptionalPropertyTypes": false,
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./*"]
     }
   },
+  "include": ["./**/*.ts", "./**/*.tsx", "./tailwind.config.cjs"]
 }
