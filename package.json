@@ -33,9 +33,7 @@
     "react-map-gl": "^7.0.19"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.2.0",
     "@intavia/api-client": "^0.1.2",
-    "@stefanprobst/commitlint-config": "^1.0.3",
     "@stefanprobst/eslint-config": "^1.0.5",
     "@stefanprobst/eslint-config-react": "^1.0.4",
     "@stefanprobst/eslint-config-storybook": "^1.0.1",
@@ -115,7 +113,6 @@
   },
   "prettier": "@stefanprobst/prettier-config",
   "simple-git-hooks": {
-    "commit-msg": "npx commitlint --edit",
     "pre-commit": "npx lint-staged",
     "pre-push": "npm run validate"
   },
