@@ -1,7 +1,3 @@
-interface Array<T> {
-  filter(predicate: BooleanConstructor): Array<NonNullable<T>>
-}
-
 type EmptyObject = Record<string, never>
 
 type DistributiveOmit<T, K extends PropertyType> = T extends unknown ? Omit<T, K> : never
