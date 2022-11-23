@@ -7,6 +7,7 @@ import {
   configureApiBaseUrl,
   searchEntities,
 } from '@intavia/api-client'
+import { keyBy } from '@stefanprobst/key-by'
 import { log } from '@stefanprobst/log'
 import { normalize, schema } from 'normalizr'
 import { format } from 'prettier'
@@ -33,19 +34,49 @@ async function generate(limit: number) {
   )
 
   const entitiesById = entities.entities
-  const eventsById = entities.events
+  const _eventsById = entities.events
+
+  const _events = Object.values(_eventsById)
+    // FIXME: the backend currently returns incorrect geojson coordinates in [lat, lng], but geojson requires [lng, lat].
+    .map((event) => {
+      if (event.place?.geometry == null || event.place.geometry.type !== 'Point') return event
+
+      return {
+        ...event,
+        place: {
+          ...event.place,
+          geometry: {
+            ...event.place.geometry,
+            coordinates: [event.place.geometry.coordinates[1], event.place.geometry.coordinates[0]],
+          },
+        },
+      }
+    })
+    // FIXME: the backend currently does not return event kinds.
+    .map((event) => {
+      const id = event.id.slice(0, event.id.lastIndexOf('/'))
+      const label = id.slice(id.lastIndexOf('/') + 1)
+
+      return {
+        ...event,
+        kind: {
+          id: id,
+          label: { default: label },
+        },
+      }
+    })
+  const eventsById = keyBy(_events, (event) => {
+    return event.id
+  })
 
   const fixturesFolder = join(process.cwd(), 'stories', 'fixtures')
   await mkdir(fixturesFolder, { recursive: true })
 
-  const filePathEntities = join(fixturesFolder, `entities-${limit}.json`)
-  await writeFile(filePathEntities, format(JSON.stringify(entitiesById), { parser: 'json' }), {
-    encoding: 'utf-8',
-  })
-  const filePathEvents = join(fixturesFolder, `events-${limit}.json`)
-  await writeFile(filePathEvents, format(JSON.stringify(eventsById), { parser: 'json' }), {
-    encoding: 'utf-8',
-  })
+  await writeFile(
+    join(fixturesFolder, `fixture-${limit}.json`),
+    format(JSON.stringify({ entities: entitiesById, events: eventsById }), { parser: 'json' }),
+    { encoding: 'utf-8' },
+  )
 }
 
 fixtureSizes.forEach((limit) => {
