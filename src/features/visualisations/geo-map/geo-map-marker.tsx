@@ -13,7 +13,7 @@ interface GeoMapMarkerProps {
   
 export function GeoMapMarker(props: GeoMapMarkerProps): JSX.Element {
     const { color, coordinates, onHoverStart, onHoverEnd, onClick, size = 16 } = props;
-  
+
     const [longitude, latitude] = coordinates;
   
     return (

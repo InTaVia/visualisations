@@ -6,7 +6,7 @@
     "place": {
       "id": "http://www.intavia.eu/apis/place/14608",
       "label": { "default": "Prag" },
-      "geometry": { "coordinates": [50.08804, 14.42076], "type": "Point" },
+      "geometry": { "coordinates": [14.42076, 50.08804], "type": "Point" },
       "kind": "place"
     },
     "relations": [
@@ -37,7 +37,12 @@
         },
         "role": { "id": "http://www.intavia.eu/apis/deceased_person/147956" }
       }
-    ]
+    ],
+    "kind": {
+      "id": "http://www.intavia.eu/apis/deathevent",
+      "label": { "default": "deathevent" }
+    },
+    "type": "deathevent"
   },
   "http://www.intavia.eu/apis/birthevent/147956": {
     "id": "http://www.intavia.eu/apis/birthevent/147956",
@@ -46,7 +51,7 @@
     "place": {
       "id": "http://www.intavia.eu/apis/place/14608",
       "label": { "default": "Prag" },
-      "geometry": { "coordinates": [50.08804, 14.42076], "type": "Point" },
+      "geometry": { "coordinates": [14.42076, 50.08804], "type": "Point" },
       "kind": "place"
     },
     "relations": [
@@ -77,7 +82,12 @@
         },
         "role": { "id": "http://www.intavia.eu/apis/born_person/147956" }
       }
-    ]
+    ],
+    "kind": {
+      "id": "http://www.intavia.eu/apis/birthevent",
+      "label": { "default": "birthevent" }
+    },
+    "type": "birthevent"
   },
   "http://www.intavia.eu/apis/event/personplace/147972": {
     "id": "http://www.intavia.eu/apis/event/personplace/147972",
@@ -85,7 +95,7 @@
     "place": {
       "id": "http://www.intavia.eu/apis/place/14608",
       "label": { "default": "Prag" },
-      "geometry": { "coordinates": [50.08804, 14.42076], "type": "Point" },
+      "geometry": { "coordinates": [14.42076, 50.08804], "type": "Point" },
       "kind": "place"
     },
     "relations": [
@@ -119,7 +129,12 @@
           "label": { "default": "wirkte in" }
         }
       }
-    ]
+    ],
+    "kind": {
+      "id": "http://www.intavia.eu/apis/event/personplace",
+      "label": { "default": "personplace" }
+    },
+    "type": "personplace"
   },
   "http://www.intavia.eu/apis/deathevent/26697": {
     "id": "http://www.intavia.eu/apis/deathevent/26697",
@@ -128,7 +143,7 @@
     "place": {
       "id": "http://www.intavia.eu/apis/place/3162",
       "label": { "default": "Klausenburg" },
-      "geometry": { "coordinates": [46.76667, 23.6], "type": "Point" },
+      "geometry": { "coordinates": [23.6, 46.76667], "type": "Point" },
       "kind": "place"
     },
     "relations": [
@@ -153,7 +168,12 @@
         },
         "role": { "id": "http://www.intavia.eu/apis/deceased_person/26697" }
       }
-    ]
+    ],
+    "kind": {
+      "id": "http://www.intavia.eu/apis/deathevent",
+      "label": { "default": "deathevent" }
+    },
+    "type": "deathevent"
   },
   "http://www.intavia.eu/apis/birthevent/26697": {
     "id": "http://www.intavia.eu/apis/birthevent/26697",
@@ -162,7 +182,7 @@
     "place": {
       "id": "http://www.intavia.eu/apis/place/3162",
       "label": { "default": "Klausenburg" },
-      "geometry": { "coordinates": [46.76667, 23.6], "type": "Point" },
+      "geometry": { "coordinates": [23.6, 46.76667], "type": "Point" },
       "kind": "place"
     },
     "relations": [
@@ -187,6 +207,11 @@
         },
         "role": { "id": "http://www.intavia.eu/apis/born_person/26697" }
       }
-    ]
+    ],
+    "kind": {
+      "id": "http://www.intavia.eu/apis/birthevent",
+      "label": { "default": "birthevent" }
+    },
+    "type": "birthevent"
   }
 }
