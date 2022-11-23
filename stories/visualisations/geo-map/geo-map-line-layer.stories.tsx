@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import {
   type GeoMapLineLayerProps,
   GeoMapLineLayer,
-} from '@/features/visualisations/geo-map/geo-map-line-layer'
+} from '@/visualisations/geo-map/geo-map-line-layer'
 import { GeoMapDecorator } from '~/stories/visualisations/geo-map/geo-map.decorator'
 
 const meta: Meta<GeoMapLineLayerProps> = {

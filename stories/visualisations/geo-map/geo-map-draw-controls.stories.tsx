@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import {
   type GeoMapDrawControlsProps,
   GeoMapDrawControls,
-} from '@/features/visualisations/geo-map/geo-map-draw-controls'
+} from '@/visualisations/geo-map/geo-map-draw-controls'
 import { GeoMapDecorator } from '~/stories/visualisations/geo-map/geo-map.decorator'
 
 const meta: Meta<GeoMapDrawControlsProps> = {
