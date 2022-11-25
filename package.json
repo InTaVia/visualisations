@@ -34,7 +34,7 @@
     "react-map-gl": "^7.0.19"
   },
   "devDependencies": {
-    "@intavia/api-client": "^0.1.2",
+    "@intavia/api-client": "^0.1.3",
     "@stefanprobst/eslint-config": "^1.0.5",
     "@stefanprobst/eslint-config-react": "^1.0.4",
     "@stefanprobst/eslint-config-storybook": "^1.0.1",
