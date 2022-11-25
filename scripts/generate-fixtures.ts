@@ -51,18 +51,20 @@ async function generate(limit: number) {
       }
     })
 
-  const _events = Object.values(_eventsById).map((event) => {
-    const id = event.id.slice(0, event.id.lastIndexOf('/'))
-    const label = id.slice(id.lastIndexOf('/') + 1)
+  const _events = Object.values(_eventsById)
+    // FIXME: the backend currently does not return event kinds.
+    .map((event) => {
+      const id = event.id.slice(0, event.id.lastIndexOf('/'))
+      const label = id.slice(id.lastIndexOf('/') + 1)
 
-    return {
-      ...event,
-      kind: {
-        id: id,
-        label: { default: label },
-      },
-    }
-  })
+      return {
+        ...event,
+        kind: {
+          id: id,
+          label: { default: label },
+        },
+      }
+    })
   const eventsById = keyBy(_events, (event) => {
     return event.id
   })
