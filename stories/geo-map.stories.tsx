@@ -140,7 +140,7 @@ export const ClusterMarkersLayer: Story<GeoMapProps> =
         //FIXME nested objects?
         const equalsExpression = [
           "==",
-          ["get", "kind", ["get", "label", ["get", "default"]]],
+          ["get", "default", ["get", "label", ["get", "kind"]]],
           eventType,
         ];
         return [
