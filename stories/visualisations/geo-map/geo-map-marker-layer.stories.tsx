@@ -4,7 +4,6 @@ import {
   type GeoMapMarkerLayerProps,
   GeoMapMarkerLayer,
 } from '@/visualisations/geo-map/geo-map-marker-layer'
-import { eventKindColors } from '@/visualisations/visualisation.config'
 import fixtureOneEntity from '~/stories/fixtures/fixture-1.json'
 import fixtureTwoEntities from '~/stories/fixtures/fixture-2.json'
 import fixtureTwentyEntities from '~/stories/fixtures/fixture-20.json'
@@ -21,6 +20,7 @@ const fixtures = {
 
 type GeoMapMarkerLayerStoryProps = GeoMapMarkerLayerProps & {
   count: keyof typeof fixtures
+  cluster: boolean
 }
 
 const meta: Meta<GeoMapMarkerLayerStoryProps> = {
@@ -45,11 +45,12 @@ export default meta
 export const Default: StoryObj<GeoMapMarkerLayerStoryProps> = {
   args: {
     count: 'hundred',
+    cluster: true,
   },
   render(args) {
     const count = args.count as keyof typeof fixtures
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { points } = usePointFeatureCollection(fixtures[count])
-    return <GeoMapMarkerLayer data={points} />
+    return <GeoMapMarkerLayer data={points} cluster={args.cluster} />
   },
 }

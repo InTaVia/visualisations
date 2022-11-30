@@ -11,6 +11,7 @@ const layer: LayerProps = {
 
 export interface GeoMapMarkerLayerProps<T extends EmptyObject = EmptyObject> {
   data: FeatureCollection<Point, T>
+  cluster?: boolean
   onChangeHover?: (feature: Feature<Point, T> | null) => void
 }
 
@@ -20,10 +21,10 @@ export interface GeoMapMarkerLayerProps<T extends EmptyObject = EmptyObject> {
 export function GeoMapMarkerLayer<T extends EmptyObject = EmptyObject>(
   props: GeoMapMarkerLayerProps<T>,
 ): JSX.Element {
-  const { data } = props
+  const { data, cluster = false } = props
 
   return (
-    <Source data={data} type="geojson">
+    <Source data={data} type="geojson" cluster={cluster}>
       <Layer {...layer} />
     </Source>
   )
