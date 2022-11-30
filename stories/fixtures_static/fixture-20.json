@@ -1,0 +1,1651 @@
+{
+  "entities": {
+    "http://www.intavia.eu/apis/place/13714": {
+      "id": "http://www.intavia.eu/apis/place/13714",
+      "label": { "default": "Paris" },
+      "geometry": { "coordinates": [48.85341, 2.3488], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26740": {
+      "id": "http://www.intavia.eu/apis/personproxy/26740",
+      "label": { "default": "Thugut, Franz Maria Frh. von" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26740/" },
+        {
+          "id": "26740",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/event/personplace/152921",
+        "http://www.intavia.eu/apis/deathevent/26740",
+        "http://www.intavia.eu/apis/event/personplace/152904",
+        "http://www.intavia.eu/apis/event/personplace/152907",
+        "http://www.intavia.eu/apis/event/personplace/152908",
+        "http://www.intavia.eu/apis/event/personplace/152909",
+        "http://www.intavia.eu/apis/event/personplace/152912",
+        "http://www.intavia.eu/apis/event/personplace/152913",
+        "http://www.intavia.eu/apis/event/personplace/152915",
+        "http://www.intavia.eu/apis/event/personplace/152916",
+        "http://www.intavia.eu/apis/event/personplace/152917",
+        "http://www.intavia.eu/apis/birthevent/26740",
+        "http://www.intavia.eu/apis/event/personplace/152903"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/183": {
+      "id": "http://www.intavia.eu/apis/place/183",
+      "label": { "default": "Wien" },
+      "geometry": { "coordinates": [48.20849, 16.37208], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/7217": {
+      "id": "http://www.intavia.eu/apis/place/7217",
+      "label": { "default": "Istanbul" },
+      "geometry": { "coordinates": [41.01384, 28.94966], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/12165": {
+      "id": "http://www.intavia.eu/apis/place/12165",
+      "label": { "default": "Neapel" },
+      "geometry": { "coordinates": [40.85631, 14.24641], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/20549": {
+      "id": "http://www.intavia.eu/apis/place/20549",
+      "label": { "default": "Warschau" },
+      "geometry": { "coordinates": [52.22977, 21.01178], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/10015": {
+      "id": "http://www.intavia.eu/apis/place/10015",
+      "label": { "default": "Linz" },
+      "geometry": { "coordinates": [48.30639, 14.28611], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/132758": {
+      "id": "http://www.intavia.eu/apis/place/132758",
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26717": {
+      "id": "http://www.intavia.eu/apis/personproxy/26717",
+      "label": { "default": "Thorsch, Koppelmann" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26717/" },
+        {
+          "id": "26717",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/event/personplace/137603",
+        "http://www.intavia.eu/apis/event/personplace/137605",
+        "http://www.intavia.eu/apis/event/personplace/155638",
+        "http://www.intavia.eu/apis/deathevent/26717",
+        "http://www.intavia.eu/apis/birthevent/26717"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/14608": {
+      "id": "http://www.intavia.eu/apis/place/14608",
+      "label": { "default": "Prag" },
+      "geometry": { "coordinates": [50.08804, 14.42076], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/147956": {
+      "id": "http://www.intavia.eu/apis/personproxy/147956",
+      "label": { "default": "Sauer, Hedda" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        {
+          "id": "147956",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        },
+        {
+          "id": "116977477",
+          "provider": {
+            "label": "Gemeinsame Normdatei (GND)",
+            "baseUrl": "https://d-nb.info/gnd"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/event/personplace/147972",
+        "http://www.intavia.eu/apis/deathevent/147956",
+        "http://www.intavia.eu/apis/birthevent/147956"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/3162": {
+      "id": "http://www.intavia.eu/apis/place/3162",
+      "label": { "default": "Klausenburg" },
+      "geometry": { "coordinates": [46.76667, 23.6], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26697": {
+      "id": "http://www.intavia.eu/apis/personproxy/26697",
+      "label": { "default": "Thornton, Jonathan" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26697/" },
+        {
+          "id": "26697",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26697",
+        "http://www.intavia.eu/apis/birthevent/26697"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/400": {
+      "id": "http://www.intavia.eu/apis/place/400",
+      "label": { "default": "Budapest" },
+      "geometry": { "coordinates": [47.49801, 19.03991], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26700": {
+      "id": "http://www.intavia.eu/apis/personproxy/26700",
+      "label": { "default": "Thoroczkai Wigand, Ede" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26700/" },
+        {
+          "id": "26700",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26700",
+        "http://www.intavia.eu/apis/birthevent/26700"
+      ]
+    },
+    "http://www.intavia.eu/apis/personproxy/26703": {
+      "id": "http://www.intavia.eu/apis/personproxy/26703",
+      "label": { "default": "Thorsch, Alexander" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26703/" },
+        {
+          "id": "26703",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26703",
+        "http://www.intavia.eu/apis/birthevent/26703"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/5521": {
+      "id": "http://www.intavia.eu/apis/place/5521",
+      "label": { "default": "Golčův Jeníkov" },
+      "geometry": { "coordinates": [49.81626, 15.47686], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/26707": {
+      "id": "http://www.intavia.eu/apis/place/26707",
+      "label": { "default": "Victoria" },
+      "geometry": { "coordinates": [48.43294, -123.3693], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26706": {
+      "id": "http://www.intavia.eu/apis/personproxy/26706",
+      "label": { "default": "Thorsch, Alphons" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26706/" },
+        {
+          "id": "26706",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26706",
+        "http://www.intavia.eu/apis/birthevent/26706"
+      ]
+    },
+    "http://www.intavia.eu/apis/personproxy/26711": {
+      "id": "http://www.intavia.eu/apis/personproxy/26711",
+      "label": { "default": "Thorsch, David" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26711/" },
+        {
+          "id": "26711",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26711",
+        "http://www.intavia.eu/apis/birthevent/26711"
+      ]
+    },
+    "http://www.intavia.eu/apis/personproxy/26714": {
+      "id": "http://www.intavia.eu/apis/personproxy/26714",
+      "label": { "default": "Thorsch, Ernestine" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26714/" },
+        {
+          "id": "26714",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26714",
+        "http://www.intavia.eu/apis/birthevent/26714"
+      ]
+    },
+    "http://www.intavia.eu/apis/personproxy/26723": {
+      "id": "http://www.intavia.eu/apis/personproxy/26723",
+      "label": { "default": "Thorsch, Otto" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26723/" },
+        {
+          "id": "26723",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26723",
+        "http://www.intavia.eu/apis/birthevent/26723"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/11509": {
+      "id": "http://www.intavia.eu/apis/place/11509",
+      "label": { "default": "Mödling" },
+      "geometry": { "coordinates": [48.08605, 16.28921], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26726": {
+      "id": "http://www.intavia.eu/apis/personproxy/26726",
+      "label": { "default": "Thorsch, Philipp" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26726/" },
+        {
+          "id": "26726",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26726",
+        "http://www.intavia.eu/apis/birthevent/26726"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/16723": {
+      "id": "http://www.intavia.eu/apis/place/16723",
+      "label": { "default": "Teplitz" },
+      "geometry": { "coordinates": [50.6404, 13.82451], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26729": {
+      "id": "http://www.intavia.eu/apis/personproxy/26729",
+      "label": { "default": "Thümen, Felix Frh. von" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26729/" },
+        {
+          "id": "26729",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26729",
+        "http://www.intavia.eu/apis/birthevent/26729"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/4017": {
+      "id": "http://www.intavia.eu/apis/place/4017",
+      "label": { "default": "Dresden" },
+      "geometry": { "coordinates": [51.05089, 13.73832], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/65676": {
+      "id": "http://www.intavia.eu/apis/place/65676",
+      "label": { "default": "Kefermarkt" },
+      "geometry": { "coordinates": [48.44264, 14.53877], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26732": {
+      "id": "http://www.intavia.eu/apis/personproxy/26732",
+      "label": { "default": "Thürheim, Andreas Joseph Gf. von" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26732/" },
+        {
+          "id": "26732",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26732",
+        "http://www.intavia.eu/apis/birthevent/26732"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/4218": {
+      "id": "http://www.intavia.eu/apis/place/4218",
+      "label": { "default": "Eferding" },
+      "geometry": { "coordinates": [48.30866, 14.02233], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26736": {
+      "id": "http://www.intavia.eu/apis/personproxy/26736",
+      "label": { "default": "Thürheim, Louise  Gfn. von" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26736/" },
+        {
+          "id": "26736",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26736",
+        "http://www.intavia.eu/apis/birthevent/26736"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/117918": {
+      "id": "http://www.intavia.eu/apis/place/117918",
+      "label": { "default": "Tienen" },
+      "geometry": { "coordinates": [50.80745, 4.9378], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/11799": {
+      "id": "http://www.intavia.eu/apis/place/11799",
+      "label": { "default": "München" },
+      "geometry": { "coordinates": [48.13743, 11.57549], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26743": {
+      "id": "http://www.intavia.eu/apis/personproxy/26743",
+      "label": { "default": "Thuille, Ludwig" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26743/" },
+        {
+          "id": "26743",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26743",
+        "http://www.intavia.eu/apis/birthevent/26743"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/1883": {
+      "id": "http://www.intavia.eu/apis/place/1883",
+      "label": { "default": "Bozen" },
+      "geometry": { "coordinates": [46.49067, 11.33982], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/9735": {
+      "id": "http://www.intavia.eu/apis/place/9735",
+      "label": { "default": "Lemberg" },
+      "geometry": { "coordinates": [49.83826, 24.02324], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26749": {
+      "id": "http://www.intavia.eu/apis/personproxy/26749",
+      "label": { "default": "Thullie, Maksymilian Marceli" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26749/" },
+        {
+          "id": "26749",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26749",
+        "http://www.intavia.eu/apis/birthevent/26749"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/4767": {
+      "id": "http://www.intavia.eu/apis/place/4767",
+      "label": { "default": "Graz" },
+      "geometry": { "coordinates": [47.06667, 15.45], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26752": {
+      "id": "http://www.intavia.eu/apis/personproxy/26752",
+      "label": { "default": "Thumser, Viktor" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26752/" },
+        {
+          "id": "26752",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26752",
+        "http://www.intavia.eu/apis/birthevent/26752"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/21655": {
+      "id": "http://www.intavia.eu/apis/place/21655",
+      "label": { "default": "Znaim" },
+      "geometry": { "coordinates": [48.8555, 16.0488], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/place/107276": {
+      "id": "http://www.intavia.eu/apis/place/107276",
+      "label": { "default": "Nové Pavlovice" },
+      "geometry": { "coordinates": [50.78055, 15.05458], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26755": {
+      "id": "http://www.intavia.eu/apis/personproxy/26755",
+      "label": { "default": "Thum, Anton d. J." },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26755/" },
+        {
+          "id": "26755",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26755",
+        "http://www.intavia.eu/apis/birthevent/26755"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/1424": {
+      "id": "http://www.intavia.eu/apis/place/1424",
+      "label": { "default": "Liberec" },
+      "geometry": { "coordinates": [50.76711, 15.05619], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26764": {
+      "id": "http://www.intavia.eu/apis/personproxy/26764",
+      "label": { "default": "Thum, Theodor" },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26764/" },
+        {
+          "id": "26764",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26764",
+        "http://www.intavia.eu/apis/birthevent/26764"
+      ]
+    },
+    "http://www.intavia.eu/apis/place/107278": {
+      "id": "http://www.intavia.eu/apis/place/107278",
+      "label": { "default": "Doksy" },
+      "geometry": { "coordinates": [50.56471, 14.65553], "type": "Point" },
+      "kind": "place"
+    },
+    "http://www.intavia.eu/apis/personproxy/26770": {
+      "id": "http://www.intavia.eu/apis/personproxy/26770",
+      "label": {
+        "default": "Thun-Hohenstein-Salm-Reifferscheid, Christiane Gfn. von"
+      },
+      "source": { "citation": "Austrian Biographical Dictionary" },
+      "linkedIds": [
+        { "id": "https://apis-edits.acdh-dev.oeaw.ac.at/entity/26770/" },
+        {
+          "id": "26770",
+          "provider": {
+            "label": "Österreichische Biographische Lexikon, APIS",
+            "baseUrl": "https://apis.acdh.oeaw.ac.at"
+          }
+        }
+      ],
+      "kind": "person",
+      "events": [
+        "http://www.intavia.eu/apis/deathevent/26770",
+        "http://www.intavia.eu/apis/birthevent/26770"
+      ]
+    }
+  },
+  "events": {
+    "http://www.intavia.eu/apis/event/personplace/152921": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152921",
+      "label": { "default": "Thugut, Franz Maria Frh. von wirkte in Paris" },
+      "startDate": "1791-01-01T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/13714",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152921",
+            "label": { "default": "wirkte in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26740": {
+      "id": "http://www.intavia.eu/apis/deathevent/26740",
+      "label": { "default": "Death of Franz Maria Frh. von Thugut" },
+      "endDate": "1818-05-28T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/183",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26740" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152904": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152904",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von ausgebildet in Istanbul"
+      },
+      "startDate": "1754-01-01T00:00:00.000Z",
+      "endDate": "1757-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/7217",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152904",
+            "label": { "default": "ausgebildet in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152907": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152907",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Geschäftsträger in Istanbul"
+      },
+      "startDate": "1769-01-01T00:00:00.000Z",
+      "endDate": "1770-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/7217",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152907",
+            "label": { "default": "war Geschäftsträger in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152908": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152908",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Resident in Istanbul"
+      },
+      "startDate": "1770-01-01T00:00:00.000Z",
+      "endDate": "1771-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/7217",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152908",
+            "label": { "default": "war Resident in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152909": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152909",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Internuntius in Istanbul"
+      },
+      "startDate": "1771-01-01T00:00:00.000Z",
+      "endDate": "1776-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/7217",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152909",
+            "label": { "default": "war Internuntius in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152912": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152912",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Diplomat in Paris"
+      },
+      "startDate": "1777-01-01T00:00:00.000Z",
+      "endDate": "1779-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/13714",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152912",
+            "label": { "default": "war Diplomat in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152913": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152913",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Diplomat in Neapel"
+      },
+      "startDate": "1777-01-01T00:00:00.000Z",
+      "endDate": "1779-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/12165",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152913",
+            "label": { "default": "war Diplomat in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152915": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152915",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Gesandter in Warschau"
+      },
+      "startDate": "1780-01-01T00:00:00.000Z",
+      "endDate": "1783-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/20549",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152915",
+            "label": { "default": "war Gesandter in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152916": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152916",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von lebte/wohnte in Paris"
+      },
+      "startDate": "1783-01-01T00:00:00.000Z",
+      "endDate": "1787-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/13714",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152916",
+            "label": { "default": "lebte/wohnte in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152917": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152917",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Diplomat in Neapel"
+      },
+      "startDate": "1787-01-01T00:00:00.000Z",
+      "endDate": "1791-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/12165",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152917",
+            "label": { "default": "war Diplomat in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26740": {
+      "id": "http://www.intavia.eu/apis/birthevent/26740",
+      "label": { "default": "Birth of Franz Maria Frh. von Thugut" },
+      "startDate": "1736-03-31T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/10015",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26740" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/152903": {
+      "id": "http://www.intavia.eu/apis/event/personplace/152903",
+      "label": {
+        "default": "Thugut, Franz Maria Frh. von war Dolmetscher/Übersetzer in Istanbul"
+      },
+      "startDate": "1757-01-01T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/7217",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26740",
+          "label": { "default": "Thugut, Franz Maria Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26740",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/152903",
+            "label": { "default": "war Dolmetscher/Übersetzer in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/137603": {
+      "id": "http://www.intavia.eu/apis/event/personplace/137603",
+      "label": { "default": "Thorsch, Koppelmann wirkte in Ort (Dummy)" },
+      "place": "http://www.intavia.eu/apis/place/132758",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26717",
+          "label": { "default": "Thorsch, Koppelmann" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26717",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/137603",
+            "label": { "default": "wirkte in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/137605": {
+      "id": "http://www.intavia.eu/apis/event/personplace/137605",
+      "label": { "default": "Thorsch, Koppelmann wirkte in Ort (Dummy)" },
+      "place": "http://www.intavia.eu/apis/place/132758",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26717",
+          "label": { "default": "Thorsch, Koppelmann" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26717",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/137605",
+            "label": { "default": "wirkte in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/155638": {
+      "id": "http://www.intavia.eu/apis/event/personplace/155638",
+      "label": { "default": "Thorsch, Koppelmann arbeitete in Prag" },
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26717",
+          "label": { "default": "Thorsch, Koppelmann" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26717",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/155638",
+            "label": { "default": "arbeitete in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26717": {
+      "id": "http://www.intavia.eu/apis/deathevent/26717",
+      "label": { "default": "Death of Koppelmann Thorsch" },
+      "endDate": "1864-07-18T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26717",
+          "label": { "default": "Thorsch, Koppelmann" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26717",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26717" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26717": {
+      "id": "http://www.intavia.eu/apis/birthevent/26717",
+      "label": { "default": "Birth of Koppelmann Thorsch" },
+      "startDate": "1803-01-29T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26717",
+          "label": { "default": "Thorsch, Koppelmann" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26717",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26717" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/event/personplace/147972": {
+      "id": "http://www.intavia.eu/apis/event/personplace/147972",
+      "label": { "default": "Sauer, Hedda wirkte in Prag" },
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/147956",
+          "label": { "default": "Sauer, Hedda" },
+          "entity": "http://www.intavia.eu/apis/personproxy/147956",
+          "role": {
+            "id": "http://www.intavia.eu/apis/personplace/eventrole/147972",
+            "label": { "default": "wirkte in" }
+          }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/event/personplace",
+        "label": { "default": "personplace" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/147956": {
+      "id": "http://www.intavia.eu/apis/deathevent/147956",
+      "label": { "default": "Death of Hedda Sauer" },
+      "endDate": "1953-03-21T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/147956",
+          "label": { "default": "Sauer, Hedda" },
+          "entity": "http://www.intavia.eu/apis/personproxy/147956",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/147956" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/147956": {
+      "id": "http://www.intavia.eu/apis/birthevent/147956",
+      "label": { "default": "Birth of Hedda Sauer" },
+      "startDate": "1875-09-24T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/147956",
+          "label": { "default": "Sauer, Hedda" },
+          "entity": "http://www.intavia.eu/apis/personproxy/147956",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/147956" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26697": {
+      "id": "http://www.intavia.eu/apis/deathevent/26697",
+      "label": { "default": "Death of Jonathan Thornton" },
+      "endDate": "1847-12-31T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/3162",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26697",
+          "label": { "default": "Thornton, Jonathan" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26697",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26697" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26697": {
+      "id": "http://www.intavia.eu/apis/birthevent/26697",
+      "label": { "default": "Birth of Jonathan Thornton" },
+      "startDate": "1776-01-01T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/3162",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26697",
+          "label": { "default": "Thornton, Jonathan" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26697",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26697" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26700": {
+      "id": "http://www.intavia.eu/apis/deathevent/26700",
+      "label": { "default": "Death of Ede Thoroczkai Wigand" },
+      "endDate": "1945-01-20T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/400",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26700",
+          "label": { "default": "Thoroczkai Wigand, Ede" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26700",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26700" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26700": {
+      "id": "http://www.intavia.eu/apis/birthevent/26700",
+      "label": { "default": "Birth of Ede Thoroczkai Wigand" },
+      "startDate": "1869-05-15T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/400",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26700",
+          "label": { "default": "Thoroczkai Wigand, Ede" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26700",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26700" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26703": {
+      "id": "http://www.intavia.eu/apis/deathevent/26703",
+      "label": { "default": "Death of Alexander Thorsch" },
+      "endDate": "1924-11-12T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/183",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26703",
+          "label": { "default": "Thorsch, Alexander" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26703",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26703" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26703": {
+      "id": "http://www.intavia.eu/apis/birthevent/26703",
+      "label": { "default": "Birth of Alexander Thorsch" },
+      "startDate": "1853-01-01T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/5521",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26703",
+          "label": { "default": "Thorsch, Alexander" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26703",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26703" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26706": {
+      "id": "http://www.intavia.eu/apis/deathevent/26706",
+      "label": { "default": "Death of Alphons Thorsch" },
+      "endDate": "1945-11-30T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/26707",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26706",
+          "label": { "default": "Thorsch, Alphons" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26706",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26706" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26706": {
+      "id": "http://www.intavia.eu/apis/birthevent/26706",
+      "label": { "default": "Birth of Alphons Thorsch" },
+      "startDate": "1872-05-21T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/183",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26706",
+          "label": { "default": "Thorsch, Alphons" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26706",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26706" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26711": {
+      "id": "http://www.intavia.eu/apis/deathevent/26711",
+      "label": { "default": "Death of David Thorsch" },
+      "endDate": "1883-07-26T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/183",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26711",
+          "label": { "default": "Thorsch, David" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26711",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26711" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26711": {
+      "id": "http://www.intavia.eu/apis/birthevent/26711",
+      "label": { "default": "Birth of David Thorsch" },
+      "startDate": "1832-12-16T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26711",
+          "label": { "default": "Thorsch, David" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26711",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26711" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26714": {
+      "id": "http://www.intavia.eu/apis/deathevent/26714",
+      "label": { "default": "Death of Ernestine Thorsch" },
+      "endDate": "1912-11-13T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/183",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26714",
+          "label": { "default": "Thorsch, Ernestine" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26714",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26714" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26714": {
+      "id": "http://www.intavia.eu/apis/birthevent/26714",
+      "label": { "default": "Birth of Ernestine Thorsch" },
+      "startDate": "1836-09-12T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26714",
+          "label": { "default": "Thorsch, Ernestine" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26714",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26714" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26723": {
+      "id": "http://www.intavia.eu/apis/deathevent/26723",
+      "label": { "default": "Death of Otto Thorsch" },
+      "endDate": "1934-12-06T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/183",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26723",
+          "label": { "default": "Thorsch, Otto" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26723",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26723" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26723": {
+      "id": "http://www.intavia.eu/apis/birthevent/26723",
+      "label": { "default": "Birth of Otto Thorsch" },
+      "startDate": "1858-12-19T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26723",
+          "label": { "default": "Thorsch, Otto" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26723",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26723" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26726": {
+      "id": "http://www.intavia.eu/apis/deathevent/26726",
+      "label": { "default": "Death of Philipp Thorsch" },
+      "endDate": "1905-09-29T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/11509",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26726",
+          "label": { "default": "Thorsch, Philipp" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26726",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26726" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26726": {
+      "id": "http://www.intavia.eu/apis/birthevent/26726",
+      "label": { "default": "Birth of Philipp Thorsch" },
+      "startDate": "1831-12-06T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/14608",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26726",
+          "label": { "default": "Thorsch, Philipp" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26726",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26726" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26729": {
+      "id": "http://www.intavia.eu/apis/deathevent/26729",
+      "label": { "default": "Death of Felix Frh. von Thümen" },
+      "endDate": "1892-10-13T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/16723",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26729",
+          "label": { "default": "Thümen, Felix Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26729",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26729" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26729": {
+      "id": "http://www.intavia.eu/apis/birthevent/26729",
+      "label": { "default": "Birth of Felix Frh. von Thümen" },
+      "startDate": "1839-02-06T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/4017",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26729",
+          "label": { "default": "Thümen, Felix Frh. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26729",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26729" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26732": {
+      "id": "http://www.intavia.eu/apis/deathevent/26732",
+      "label": { "default": "Death of Andreas Joseph Gf. von Thürheim" },
+      "endDate": "1904-12-23T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/65676",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26732",
+          "label": { "default": "Thürheim, Andreas Joseph Gf. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26732",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26732" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26732": {
+      "id": "http://www.intavia.eu/apis/birthevent/26732",
+      "label": { "default": "Birth of Andreas Joseph Gf. von Thürheim" },
+      "startDate": "1827-05-17T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/4218",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26732",
+          "label": { "default": "Thürheim, Andreas Joseph Gf. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26732",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26732" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26736": {
+      "id": "http://www.intavia.eu/apis/deathevent/26736",
+      "label": { "default": "Death of Louise  Gfn. von Thürheim" },
+      "endDate": "1864-05-22T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/183",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26736",
+          "label": { "default": "Thürheim, Louise  Gfn. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26736",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26736" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26736": {
+      "id": "http://www.intavia.eu/apis/birthevent/26736",
+      "label": { "default": "Birth of Louise  Gfn. von Thürheim" },
+      "startDate": "1788-03-14T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/117918",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26736",
+          "label": { "default": "Thürheim, Louise  Gfn. von" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26736",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26736" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26743": {
+      "id": "http://www.intavia.eu/apis/deathevent/26743",
+      "label": { "default": "Death of Ludwig Thuille" },
+      "endDate": "1907-02-05T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/11799",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26743",
+          "label": { "default": "Thuille, Ludwig" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26743",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26743" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26743": {
+      "id": "http://www.intavia.eu/apis/birthevent/26743",
+      "label": { "default": "Birth of Ludwig Thuille" },
+      "startDate": "1861-11-30T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/1883",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26743",
+          "label": { "default": "Thuille, Ludwig" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26743",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26743" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26749": {
+      "id": "http://www.intavia.eu/apis/deathevent/26749",
+      "label": { "default": "Death of Maksymilian Marceli Thullie" },
+      "endDate": "1939-09-01T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/9735",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26749",
+          "label": { "default": "Thullie, Maksymilian Marceli" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26749",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26749" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26749": {
+      "id": "http://www.intavia.eu/apis/birthevent/26749",
+      "label": { "default": "Birth of Maksymilian Marceli Thullie" },
+      "startDate": "1853-01-16T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/9735",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26749",
+          "label": { "default": "Thullie, Maksymilian Marceli" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26749",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26749" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26752": {
+      "id": "http://www.intavia.eu/apis/deathevent/26752",
+      "label": { "default": "Death of Viktor Thumser" },
+      "endDate": "1928-10-27T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/4767",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26752",
+          "label": { "default": "Thumser, Viktor" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26752",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26752" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26752": {
+      "id": "http://www.intavia.eu/apis/birthevent/26752",
+      "label": { "default": "Birth of Viktor Thumser" },
+      "startDate": "1857-06-10T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/21655",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26752",
+          "label": { "default": "Thumser, Viktor" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26752",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26752" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26755": {
+      "id": "http://www.intavia.eu/apis/deathevent/26755",
+      "label": { "default": "Death of Anton d. J. Thum" },
+      "endDate": "1854-11-04T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/107276",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26755",
+          "label": { "default": "Thum, Anton d. J." },
+          "entity": "http://www.intavia.eu/apis/personproxy/26755",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26755" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26755": {
+      "id": "http://www.intavia.eu/apis/birthevent/26755",
+      "label": { "default": "Birth of Anton d. J. Thum" },
+      "startDate": "1788-12-21T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/107276",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26755",
+          "label": { "default": "Thum, Anton d. J." },
+          "entity": "http://www.intavia.eu/apis/personproxy/26755",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26755" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26764": {
+      "id": "http://www.intavia.eu/apis/deathevent/26764",
+      "label": { "default": "Death of Theodor Thum" },
+      "endDate": "1907-03-22T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/1424",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26764",
+          "label": { "default": "Thum, Theodor" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26764",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26764" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26764": {
+      "id": "http://www.intavia.eu/apis/birthevent/26764",
+      "label": { "default": "Birth of Theodor Thum" },
+      "startDate": "1829-09-17T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/107276",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26764",
+          "label": { "default": "Thum, Theodor" },
+          "entity": "http://www.intavia.eu/apis/personproxy/26764",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26764" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/deathevent/26770": {
+      "id": "http://www.intavia.eu/apis/deathevent/26770",
+      "label": {
+        "default": "Death of Christiane Gfn. von Thun-Hohenstein-Salm-Reifferscheid"
+      },
+      "endDate": "1935-08-06T23:59:59.000Z",
+      "place": "http://www.intavia.eu/apis/place/107278",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26770",
+          "label": {
+            "default": "Thun-Hohenstein-Salm-Reifferscheid, Christiane Gfn. von"
+          },
+          "entity": "http://www.intavia.eu/apis/personproxy/26770",
+          "role": { "id": "http://www.intavia.eu/apis/deceased_person/26770" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/deathevent",
+        "label": { "default": "deathevent" }
+      }
+    },
+    "http://www.intavia.eu/apis/birthevent/26770": {
+      "id": "http://www.intavia.eu/apis/birthevent/26770",
+      "label": {
+        "default": "Birth of Christiane Gfn. von Thun-Hohenstein-Salm-Reifferscheid"
+      },
+      "startDate": "1859-06-12T00:00:00.000Z",
+      "place": "http://www.intavia.eu/apis/place/107278",
+      "relations": [
+        {
+          "id": "http://www.intavia.eu/apis/personproxy/26770",
+          "label": {
+            "default": "Thun-Hohenstein-Salm-Reifferscheid, Christiane Gfn. von"
+          },
+          "entity": "http://www.intavia.eu/apis/personproxy/26770",
+          "role": { "id": "http://www.intavia.eu/apis/born_person/26770" }
+        }
+      ],
+      "kind": {
+        "id": "http://www.intavia.eu/apis/birthevent",
+        "label": { "default": "birthevent" }
+      }
+    }
+  }
+}
