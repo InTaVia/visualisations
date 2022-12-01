@@ -1,5 +1,11 @@
 node_modules/
+/dist
 *.log
+
+# caches
 .eslintcache
 .stylelintcache
 *.tsbuildinfo
+
+# auto-generated fixtures
+/stories/fixtures
