@@ -1,6 +1,6 @@
 import type { Entity, EntityEvent } from "@/api/intavia.models";
 import { useEffect, useState } from "react";
-import { EgoNetworkVis, type LinkProps, type NodeProps } from "./ego-network-vis";
+import { EgoNetworkVis, type Link, type Node } from "./ego-network-vis";
 
 export interface EgoNetworkProps {
   entity: Entity;
@@ -9,30 +9,35 @@ export interface EgoNetworkProps {
 
 export function EgoNetwork(props: EgoNetworkProps): JSX.Element {
   const { entity, getEventsForEntity } = props;
-  const [nodes, setNodes] = useState<Set<NodeProps>>(new Set<NodeProps>());
-  const [links, setLinks] = useState<Array<LinkProps>>(new Array<LinkProps>());
+  const [nodes, setNodes] = useState<Array<Node>>(new Array<Node>());
+  const [links, setLinks] = useState<Array<Link>>(new Array<Link>());
 
   function extractNodesAndLinksFromEvents(events: Array<EntityEvent>) {
-    let relatedNodes = new Set<NodeProps>();
-    let relations = new Array<LinkProps>();
+    let relatedNodes = new Array<Node>();
+    let relations = new Array<Link>();
+
+    // Add central entity to node array
+    relatedNodes.push({
+      entity: entity,
+      x: 0,
+      y: 0
+    });
 
     events.forEach((event, idx) => {
       // Place
       if (event.place) {
-        console.log(`Event takes place in ${event.place.label.default}`);
-
-        const node = {
+        const newNode = {
           entity: event.place,
-          x: 100,
-          y: idx * 50,
+          x: 0,
+          y: 0,
         };
 
-        if (relatedNodes.has(node)) {
+        if (relatedNodes.find((node) => {return node.entity.id === newNode.entity.id})) {
           // Node already exists, update link
-          let relation = relations.find((relation: LinkProps) => {
+          let relation = relations.find((relation: Link) => {
             return (
-              relation.sourceEntityId === entity.id &&
-              relation.destinationEntityId === event.place?.id
+              relation.source.entity.id === entity.id &&
+              relation.target.entity.id === event.place?.id
             );
           });
           if (relation && event.relations[0] && event.relations[0].role) {
@@ -40,10 +45,10 @@ export function EgoNetwork(props: EgoNetworkProps): JSX.Element {
           }
         } else {
           // Node doesn't exist yet, create new node and link
-          relatedNodes.add(node);
+          relatedNodes.push(newNode);
           relations.push({
-            sourceEntityId: entity.id,
-            destinationEntityId: event.place.id,
+            source: relatedNodes[0]!,
+            target: newNode,
             roles:
               event.relations[0] && event.relations[0].role
                 ? [event.relations[0].role]
@@ -67,14 +72,10 @@ export function EgoNetwork(props: EgoNetworkProps): JSX.Element {
     extractNodesAndLinksFromEvents(events);
   }, []);
 
-  console.log(nodes);
-  console.log(links);
-
   return (
     <div className="w-full h-full">
-      {nodes && links && (
+      {nodes && links && nodes.length > 0 && links.length > 0 && (
         <EgoNetworkVis
-          centralEntity={entity}
           nodes={nodes}
           links={links}
         />
