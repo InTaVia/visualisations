@@ -12,22 +12,8 @@ import { GeoMapMarkersLayer } from "../src/features/visualisations/geo-map/geo-m
 import type { RefAttributes } from "react";
 import type { MapRef } from "react-map-gl";
 
-import entities from "./fixtures/entities-2.json";
-import events from "./fixtures/events-2.json";
-
-let dataFix = {};
-for (const entityKey of Object.keys(entities)) {
-  let entity = entities[entityKey];
-  let entityEvents = entity.events;
-  let newEvents = [];
-  for (let eventKey of entityEvents) {
-    if (events.hasOwnProperty(eventKey)) {
-      newEvents.push(events[eventKey]);
-    }
-  }
-  entity.events = newEvents;
-  dataFix[entityKey] = entity;
-}
+import entities from "./fixtures/entities-100.json";
+import events from "./fixtures/events-100.json";
 
 /* 
 cases:
@@ -40,16 +26,34 @@ cases:
 const meta: Meta = {
   component: TimelineIndiviDual,
   title: "Visualisations/Timeline",
+  argTypes: {
+    entities: {
+      table: {
+        disable: true,
+      },
+    },
+    events: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export default meta;
 
 export const Default: StoryObj = {
   args: {
-    data: dataFix,
+    entities: entities,
+    events: events,
     width: 1000,
     height: 500,
     vertical: false,
+    amount: 100,
+    diameter: 14,
+    nameFilter: "",
+    stackEntities: false,
+    sortEntities: false,
   },
 };
 
@@ -64,7 +68,8 @@ export const Single: StoryObj = {
   args: {
     ...Default.args,
     vertical: false,
-    data: Object.fromEntries(Object.entries(dataFix).slice(1)),
+    cluster: false,
+    amount: 1,
   },
 };
 
@@ -79,6 +84,22 @@ export const Labels: StoryObj = {
   args: {
     ...Default.args,
     showLabels: false,
+  },
+};
+
+export const Overlap: StoryObj = {
+  args: {
+    ...Default.args,
+    overlap: true,
+  },
+};
+
+export const Cluster: StoryObj = {
+  args: {
+    ...Default.args,
+    cluster: true,
+    clusterMode: "pie",
+    overlap: false,
   },
 };
 

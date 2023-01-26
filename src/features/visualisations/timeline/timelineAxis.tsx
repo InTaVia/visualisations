@@ -1,28 +1,24 @@
 import "maplibre-gl/dist/maplibre-gl.css";
 
-import { extent } from "d3-array";
+// @ts-ignore
 import { axisBottom, axisLeft } from "d3-axis";
-import { scaleBand, scaleTime } from "d3-scale";
-import { timeFormat } from "d3-time-format";
+// @ts-ignore
 import { select } from "d3-selection";
-import { useRef, useEffect } from "react";
-
-import type { MapProps } from "react-map-gl";
+// @ts-ignore
+import { timeFormat } from "d3-time-format";
+import { useEffect, useRef } from "react";
 
 import { useElementRef } from "@/lib/use-element-ref";
 
-import { Entity, EntityEvent } from "@/api/intavia.models";
+interface TimelineAxisProps {
+  timeScale: (toBescaled: Date) => number;
+  vertical: boolean;
+  width: number;
+  height: number;
+}
 
-export const TimelineAxis = (props): JSX.Element => {
-  const {
-    timeScale,
-    width = 100,
-    height = 50,
-    vertical = false,
-    xScale,
-  } = props;
-
-  const [element, setElement] = useElementRef();
+export const TimelineAxis = (props: TimelineAxisProps): JSX.Element => {
+  const { timeScale, width = 100, height = 50, vertical = false } = props;
 
   const axisRef = useRef<SVGGElement>(null);
 
@@ -33,13 +29,12 @@ export const TimelineAxis = (props): JSX.Element => {
       let ax;
 
       if (vertical) {
-        ax = axisLeft<Date>(xScale).tickFormat(timeFormat("%Y"));
+        ax = axisLeft<Date>(timeScale).tickFormat(timeFormat("%Y"));
       } else {
-        ax = axisBottom<Date>(xScale).tickFormat(timeFormat("%Y"));
+        ax = axisBottom<Date>(timeScale).tickFormat(timeFormat("%Y"));
       }
 
       sel.call(ax);
-      /* sel.attr("transform", `translate(0, ${yScale.range()[1] + 10})`); */
 
       // vertical grid lines for each axis tick
       const dateTicks = sel.selectAll<SVGGElement, Date>("g.tick").data();
@@ -52,9 +47,8 @@ export const TimelineAxis = (props): JSX.Element => {
         .attr("stroke", "black")
         .attr("stroke-opacity", 0.2)
         .attr("shape-rendering", "crispEdges")
-        .attr("d", (date) => {
-          const x = xScale(date);
-          /* const [y0, y1] = yScale.range(); */
+        .attr("d", (date: Date) => {
+          const x = timeScale(date);
 
           if (vertical) {
             return `M -10 ${x}`;
@@ -67,13 +61,11 @@ export const TimelineAxis = (props): JSX.Element => {
         sel.html("");
       };
     }
-  }, [xScale, axisRef]);
+  }, [timeScale, axisRef]);
 
   return (
     <div
-      className={`bg-green-400 absolute ${
-        vertical === true ? "top-0" : "bottom-0"
-      } left-0`}
+      className={`absolute ${vertical === true ? "top-0" : "bottom-0"} left-0`}
       style={{ width: `${width}px`, height: `${height}px` }}
     >
       <svg width={`${width}`} height={`${height}`}>
